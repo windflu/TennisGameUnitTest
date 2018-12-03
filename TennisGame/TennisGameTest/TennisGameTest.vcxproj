@@ -156,6 +156,11 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="src\TennisGameTest.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TennisGame.vcxproj">
+      <Project>{a6253e77-4395-460e-aafe-208b44bf90e6}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
