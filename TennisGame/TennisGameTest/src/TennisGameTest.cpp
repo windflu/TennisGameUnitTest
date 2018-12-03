@@ -81,3 +81,10 @@ TEST_F( CTennisGameTest, ScoreResult_Score4v0_Player1Win )
     m_kTennis.Player1Score();
     EXPECT_EQ( m_kTennis.GetScoreResult(), "Player1 Win" );
 }
+
+TEST_F( CTennisGameTest, ScoreResult_Score1v1_FifteenAll )
+{
+    m_kTennis.Player1Score();
+    m_kTennis.Player2Score();
+    EXPECT_EQ( m_kTennis.GetScoreResult(), "Fifteen all" );
+}
