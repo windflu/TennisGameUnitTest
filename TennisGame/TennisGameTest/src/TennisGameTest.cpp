@@ -10,7 +10,6 @@ class CTennisGameTest : public Test
 protected:
     virtual void SetUp()
     {
-        m_kTennis = CTennisGame( "A", "B" );
     }
     virtual void TearDown()
     {
@@ -63,4 +62,13 @@ TEST_F( CTennisGameTest, ScoreResult_Score0v3_LoveForty )
     m_kTennis.Player2Score();
     m_kTennis.Player2Score();
     EXPECT_EQ( m_kTennis.GetScoreResult(), "Love Forty" );
+}
+
+TEST_F( CTennisGameTest, ScoreResult_Score0v4_Player2Win )
+{
+    m_kTennis.Player2Score();
+    m_kTennis.Player2Score();
+    m_kTennis.Player2Score();
+    m_kTennis.Player2Score();
+    EXPECT_EQ( m_kTennis.GetScoreResult(), "Player2 Win" );
 }
