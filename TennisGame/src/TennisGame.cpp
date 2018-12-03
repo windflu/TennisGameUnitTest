@@ -20,6 +20,7 @@ void CTennisGame::InitMap()
     m_kScoreMap[0] = "Love";
     m_kScoreMap[1] = "Fifteen";
     m_kScoreMap[2] = "Thirty";
+    m_kScoreMap[3] = "Forty";
 }
 
 std::string CTennisGame::GetScoreResult()
