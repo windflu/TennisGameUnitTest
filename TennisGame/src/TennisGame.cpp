@@ -33,6 +33,10 @@ std::string CTennisGame::GetScoreResult()
     {
         return m_strPlayer2 + " Win";
     }
+    else if ( m_nPlayer1Score == m_nPlayer2Score && m_nPlayer1Score >= 3 )
+    {
+        return "Deuce";
+    }
     else if ( m_kScoreMap[m_nPlayer1Score] == m_kScoreMap[m_nPlayer2Score] )
     {
         return m_kScoreMap[m_nPlayer1Score] + " " + "all";
