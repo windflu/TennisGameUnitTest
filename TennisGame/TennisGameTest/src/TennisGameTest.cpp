@@ -171,3 +171,14 @@ TEST_F( CTennisGameTest, ScoreResult_Score3v2_FortyThirty )
     m_kTennis.Player2Score();
     EXPECT_EQ( m_kTennis.GetScoreResult(), "Forty Thirty" );
 }
+
+TEST_F( CTennisGameTest, ScoreResult_Score3v3_Deuce )
+{
+    m_kTennis.Player1Score();
+    m_kTennis.Player1Score();
+    m_kTennis.Player1Score();
+    m_kTennis.Player2Score();
+    m_kTennis.Player2Score();
+    m_kTennis.Player2Score();
+    EXPECT_EQ( m_kTennis.GetScoreResult(), "Deuce" );
+}
