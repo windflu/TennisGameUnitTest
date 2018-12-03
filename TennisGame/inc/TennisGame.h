@@ -8,9 +8,11 @@ public:
     ~CTennisGame();
     
     std::string GetScoreResult();
-    void Player1Score() { m_nPlayer1Score++; }
-    void Player2Score() { m_nPlayer2Score++; }
-
+    void PlayerScore( int nPalyer1Score, int nPlayer2Score )
+    {
+        m_nPlayer1Score = nPalyer1Score;
+        m_nPlayer2Score = nPlayer2Score;
+    }
 private:
     void InitMap();
 
