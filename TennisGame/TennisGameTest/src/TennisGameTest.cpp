@@ -105,3 +105,13 @@ TEST_F( CTennisGameTest, ScoreResult_Score1v3_FifteenForty )
     m_kTennis.Player2Score();
     EXPECT_EQ( m_kTennis.GetScoreResult(), "Fifteen Forty" );
 }
+
+TEST_F( CTennisGameTest, ScoreResult_Score1v4_Player2Win )
+{
+    m_kTennis.Player1Score();
+    m_kTennis.Player2Score();
+    m_kTennis.Player2Score();
+    m_kTennis.Player2Score();
+    m_kTennis.Player2Score();
+    EXPECT_EQ( m_kTennis.GetScoreResult(), "Player2 Win" );
+}
