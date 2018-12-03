@@ -28,11 +28,7 @@ std::string CTennisGame::GetScoreResult()
     {
         return m_kScoreMap[m_nPlayer1Score] + " " + "all";
     }
-    else if ( m_nPlayer1Score == 1 & m_nPlayer2Score == 0 )
-    {
-        return m_kScoreMap[m_nPlayer1Score] + " " + m_kScoreMap[m_nPlayer2Score];
-    }
-    else if ( m_nPlayer1Score == 2 & m_nPlayer2Score == 0 )
+    else
     {
         return m_kScoreMap[m_nPlayer1Score] + " " + m_kScoreMap[m_nPlayer2Score];
     }
