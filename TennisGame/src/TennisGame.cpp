@@ -29,7 +29,7 @@ std::string CTennisGame::GetScoreResult()
     {
         return m_strPlayer1 + " Win";
     }
-    else if ( ( m_nPlayer2Score - m_nPlayer1Score ) == 4 )
+    else if ( m_nPlayer2Score >= 4 && ( m_nPlayer2Score - m_nPlayer1Score ) >= 2 )
     {
         return m_strPlayer2 + " Win";
     }
