@@ -193,3 +193,15 @@ TEST_F( CTennisGameTest, ScoreResult_Score4v2_Player1Win )
     m_kTennis.Player2Score();
     EXPECT_EQ( m_kTennis.GetScoreResult(), "Player1 Win" );
 }
+
+TEST_F( CTennisGameTest, ScoreResult_Score4v3_Player1Adv )
+{
+    m_kTennis.Player1Score();
+    m_kTennis.Player1Score();
+    m_kTennis.Player1Score();
+    m_kTennis.Player1Score();
+    m_kTennis.Player2Score();
+    m_kTennis.Player2Score();
+    m_kTennis.Player2Score();
+    EXPECT_EQ( m_kTennis.GetScoreResult(), "Player1 Adv" );
+}
