@@ -35,3 +35,11 @@ TEST_F( CTennisGameTest, ScoreResult_Score2v0_ThrityLove )
     m_kTennis.Player1Score();
     EXPECT_EQ( m_kTennis.GetScoreResult(), "Thirty Love" );
 }
+
+TEST_F( CTennisGameTest, ScoreResult_Score3v0_FortyLove )
+{
+    m_kTennis.Player1Score();
+    m_kTennis.Player1Score();
+    m_kTennis.Player1Score();
+    EXPECT_EQ( m_kTennis.GetScoreResult(), "Forty Love" );
+}
