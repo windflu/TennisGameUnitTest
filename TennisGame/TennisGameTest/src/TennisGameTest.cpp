@@ -49,3 +49,10 @@ TEST_F( CTennisGameTest, ScoreResult_Score0v1_LoveFifteen )
     m_kTennis.Player2Score();
     EXPECT_EQ( m_kTennis.GetScoreResult(), "Love Fifteen" );
 }
+
+TEST_F( CTennisGameTest, ScoreResult_Score0v2_LoveThirty )
+{
+    m_kTennis.Player2Score();
+    m_kTennis.Player2Score();
+    EXPECT_EQ( m_kTennis.GetScoreResult(), "Love Thirty" );
+}
