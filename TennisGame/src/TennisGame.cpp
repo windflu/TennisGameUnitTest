@@ -23,9 +23,9 @@ void CTennisGame::InitMap()
 
 std::string CTennisGame::GetScoreResult()
 {
-    if ( m_nPlayer1Score == 0 & m_nPlayer2Score == 0 )
+    if ( m_kScoreMap[m_nPlayer1Score] == m_kScoreMap[m_nPlayer2Score] )
     {
-        return "Love all";
+        return m_kScoreMap[m_nPlayer1Score] + " " + "all";
     }
     else if ( m_nPlayer1Score == 1 & m_nPlayer2Score == 0 )
     {
