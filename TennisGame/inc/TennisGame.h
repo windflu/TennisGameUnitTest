@@ -9,6 +9,7 @@ public:
     
     std::string GetScoreResult();
     void Player1Score() { m_nPlayer1Score++; }
+    void Player2Score() { m_nPlayer2Score++; }
 
 private:
     void InitMap();
