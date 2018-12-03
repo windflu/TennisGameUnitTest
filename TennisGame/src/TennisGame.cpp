@@ -25,13 +25,24 @@ void CTennisGame::InitMap()
 
 std::string CTennisGame::GetScoreResult()
 {
-    if ( m_nPlayer1Score >= 4 && ( m_nPlayer1Score - m_nPlayer2Score ) >= 2 )
+    if ( ( m_nPlayer1Score != m_nPlayer2Score ) &&
+         ( m_nPlayer1Score >= 4 ) ||
+         ( m_nPlayer2Score >= 4 ) )
     {
-        return m_strPlayer1 + " Win";
-    }
-    else if ( m_nPlayer2Score >= 4 && ( m_nPlayer2Score - m_nPlayer1Score ) >= 2 )
-    {
-        return m_strPlayer2 + " Win";
+        if ( m_nPlayer1Score > m_nPlayer2Score )
+        {
+            if ( ( m_nPlayer1Score - m_nPlayer2Score ) >= 2 )
+                return m_strPlayer1 + " Win";
+            if ( ( m_nPlayer1Score - m_nPlayer2Score ) == 1 )
+                return m_strPlayer1 + " Adv";
+        }
+        else if ( m_nPlayer2Score > m_nPlayer1Score )
+        {
+            if ( ( m_nPlayer2Score - m_nPlayer1Score ) >= 2 )
+                return m_strPlayer2 + " Win";
+            if ( ( m_nPlayer2Score - m_nPlayer1Score ) == 1 )
+                return m_strPlayer2 + " Adv";
+        }
     }
     else if ( m_nPlayer1Score == m_nPlayer2Score && m_nPlayer1Score >= 3 )
     {
