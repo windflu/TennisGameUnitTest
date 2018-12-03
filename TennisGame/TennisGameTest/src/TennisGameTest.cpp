@@ -88,3 +88,20 @@ TEST_F( CTennisGameTest, ScoreResult_Score1v1_FifteenAll )
     m_kTennis.Player2Score();
     EXPECT_EQ( m_kTennis.GetScoreResult(), "Fifteen all" );
 }
+
+TEST_F( CTennisGameTest, ScoreResult_Score1v2_FifteenThirty )
+{
+    m_kTennis.Player1Score();
+    m_kTennis.Player2Score();
+    m_kTennis.Player2Score();
+    EXPECT_EQ( m_kTennis.GetScoreResult(), "Fifteen Thirty" );
+}
+
+TEST_F( CTennisGameTest, ScoreResult_Score1v3_FifteenForty )
+{
+    m_kTennis.Player1Score();
+    m_kTennis.Player2Score();
+    m_kTennis.Player2Score();
+    m_kTennis.Player2Score();
+    EXPECT_EQ( m_kTennis.GetScoreResult(), "Fifteen Forty" );
+}
